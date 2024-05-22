@@ -4,11 +4,7 @@ from streamlit_card import card
 
 ac.topHeader()
 
-
 st.write("this is the page to build and manage teams")
-
-
-
 
 col1, col2, col3 = st.columns([1,1,1])
     
