@@ -9,11 +9,11 @@ def topHeader():
     with col2:
         st.page_link("pages/buildTeam.py", label="Teams", icon=None)
     with col3:
-        st.page_link("pages/buildTeam.py", label="Engage", icon=None)
+        st.page_link("pages/engage.py", label="Engage", icon=None)
     with col4:
-        st.page_link("pages/buildTeam.py", label="Compete", icon=None)
+        st.page_link("pages/compete.py", label="Compete", icon=None)
     with col5:
-        st.page_link("pages/buildTeam.py", label="Community", icon=None)
+        st.page_link("pages/community.py", label="Community", icon=None)
 
 
 def hideSideBar():
