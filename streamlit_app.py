@@ -15,8 +15,6 @@ PAGES = {
     "BuildTeams": buildteam
 }
 
-
-
 def topHeader():
     st.header('Sonny Webster, 1220340000 rings', divider='rainbow')
     col1, col2, col3 = st.columns([1,1,1])
@@ -27,6 +25,5 @@ def topHeader():
         st.page_link("pages/buildTeam.py", label="Build Team", icon=None)
     with col3:
         st.page_link("pages/buildTeam.py", label="Build Team", icon=None)
-
 
 topHeader()
