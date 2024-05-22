@@ -1,3 +1,7 @@
 import streamlit as st
+import components.all as ac
 
-st.write("home")
+ac.topHeader()
+
+
+st.write("this is the home")
