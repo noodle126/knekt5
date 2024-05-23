@@ -6,7 +6,7 @@ def topHeader():
     col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1])
     
     with col1:
-        st.page_link("pages/home.py", label="Home", icon=None)
+        st.page_link("pages/account.py", label="Account", icon=None)
     with col2:
         st.page_link("pages/buildTeam.py", label="Teams", icon=None)
     with col3:
@@ -15,8 +15,6 @@ def topHeader():
         st.page_link("pages/compete.py", label="Compete", icon=None)
     with col5:
         st.page_link("pages/community.py", label="Community", icon=None)
-    with col5:
-        st.page_link("pages/account.py", label="Account", icon=None)
 
 
 def hideSideBar():
