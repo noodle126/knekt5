@@ -1,11 +1,6 @@
 import streamlit as st
+import components.all as ac
 
 
-st.sidebar.title("Kinekt")
-st.sidebar.caption("Teams")
-st.sidebar.caption("Engage")
-st.sidebar.caption("Earn")
-
-
-
-st.write("hello world")
+ac.hideSideBar()
+ac.topHeader()
