@@ -30,7 +30,7 @@ with col3:
                                 )
 
 # Read questions from the CSV file
-questions_df = pd.read_csv("/workspaces/knekt5/data/questions.csv")
+questions_df = pd.read_csv("/data/out/tables/SESSION_DATA.csv")
 
 # Group questions by topic
 questions_by_topic = {}
