@@ -5,7 +5,7 @@ import secrets  # For generating cryptographically secure tokens
 import components.all as ac
 
 # Load user data from CSV
-USER_DATA_FILE = "/data/out/tables/USERS.csv"
+USER_DATA_FILE = "/data/out/tables/USERS"
 user_data = pd.read_csv(USER_DATA_FILE)
 
 def hash_password(password):
