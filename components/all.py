@@ -1,7 +1,7 @@
 import streamlit as st
 
 def topHeader():
-    #st.image('../../images/knekt_small_logo.png', caption='Sunrise by the mountains')
+    st.image('images/knekt_small_logo.png')
     st.header('Sonny Webster, 1220340000 rings', divider='rainbow')
     col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
     
