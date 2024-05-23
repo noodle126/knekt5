@@ -5,7 +5,7 @@ import secrets  # For generating cryptographically secure tokens
 import components.all as ac
 
 # Load user data from CSV
-USER_DATA_FILE = "/data/out/tables/USERS.csv"
+USER_DATA_FILE = "/data/in/tables/USERS.csv"
 user_data = pd.read_csv(USER_DATA_FILE)
 
 def hash_password(password):
@@ -17,7 +17,7 @@ def generate_session_token():
     return secrets.token_hex(16)
 
 def login(username, password):
-    SESSION_DATA_FILE = "/data/out/tables/SESSION_DATA.csv"
+    SESSION_DATA_FILE = "/data/in/tables/SESSION_DATA.csv"
     if (user_data['username'] == username).any():
         user_row = user_data[user_data['username'] == username].iloc[0]
         hashed_password = user_row.iloc[1]
