@@ -1,6 +1,6 @@
 import streamlit as st
 import components.all as ac
-import streamlit as st
+import os
 from datetime import datetime
 ac.hideSideBar()
 ac.topHeader()
@@ -71,4 +71,5 @@ st.header("Suggestions for you!")
 st.write(" Share your score!")
 st.page_link("pages/stats.py", label="Stats by country, athlete and sport", icon=None)
 # st.page_link("pages/stats.py", label="Stats by country, athlete and sport", icon=None)
+
 
