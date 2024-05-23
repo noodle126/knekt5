@@ -13,7 +13,7 @@ ac.topHeader()
 # }
 
 # df = pd.DataFrame(data)
-df= pd.read_csv('data/in/tables/CLEAN_OLYMPIC_MEDALS.csv')
+df= pd.read_csv('/data/in/tables/CLEAN_OLYMPIC_MEDALS.csv')
 
 # Title of the app
 # st.title("Olympics Data Explorer")
