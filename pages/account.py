@@ -3,6 +3,7 @@ import pandas as pd
 import hashlib
 import secrets  # For generating cryptographically secure tokens
 import components.all as ac
+from IPython.display import display
 
 # Load user data from CSV
 USER_DATA_FILE = "/data/in/tables/USERS.csv"
@@ -20,6 +21,7 @@ def login(username, password):
     SESSION_DATA_FILE = "/data/in/tables/SESSION_DATA.csv"
     if (user_data['username'] == username).any():
         user_row = user_data[user_data['username'] == username].iloc[0]
+        display(user_row)
         hashed_password = user_row.iloc[1]
         if hashed_password == hash_password(password):
             # Generate and store session token
