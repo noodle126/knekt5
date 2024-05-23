@@ -97,7 +97,7 @@ def show_quiz_page(selected_topic):
 def display_question(index, questions):
     st.subheader(f"Question {index + 1}:")
     question = questions[index]
-    options = [question["Answer A"], question["Answer B"], question["Answer C"], question["Answer D"]]
+    options = [question["Answer_A"], question["Answer_B"], question["Answer_C"], question["Answer_D"]]
     st.session_state.user_answers[index] = st.radio(question["Question"], options, index=options.index(st.session_state.user_answers[index]) if st.session_state.user_answers[index] else 0)
 
     next_button_placeholder = st.empty()
@@ -132,14 +132,14 @@ def show_results():
     questions = questions_by_topic[selected_topic]
     user_answers = st.session_state.user_answers
 
-    correct_answers = [q["Correct Answer"] for q in questions]
+    correct_answers = [q["Correct_Answer"] for q in questions]
     score = sum([1 for i, ans in enumerate(user_answers) if ans == correct_answers[i]])
     st.subheader("Results:")
     st.write(f"Your scored {score} out of {len(questions)}")
 
     st.subheader("Correct Answers:")
     for i, q in enumerate(questions):
-        st.write(f"Question {i + 1}: {q['Correct Answer']}")
+        st.write(f"Question {i + 1}: {q['Correct_Answer']}")
 
     if st.button("Back to Quiz Selection"):
         reset_state()
@@ -150,7 +150,7 @@ def show_results():
         with open('user_results.csv', mode='a', newline='') as file:
             fieldnames = ['Question IDs', 'Total Score']
             writer = csv.DictWriter(file, fieldnames=fieldnames)
-            question_ids_str = json.dumps([{"Question ID": q["ID"], "Correct": user_answers[i] == q["Correct Answer"]} for i, q in enumerate(questions)])
+            question_ids_str = json.dumps([{"Question ID": q["ID"], "Correct": user_answers[i] == q["Correct_Answer"]} for i, q in enumerate(questions)])
             writer.writerow({'Question IDs': question_ids_str, 'Total Score': score})
         st.session_state.results_written = True
 
