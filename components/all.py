@@ -1,9 +1,9 @@
 import streamlit as st
 
 def topHeader():
-    st.image('images/knekt_small_logo.png')
+    #st.image('../../images/knekt_small_logo.png', caption='Sunrise by the mountains')
     st.header('Sonny Webster, 1220340000 rings', divider='rainbow')
-    col1, col2, col3, col4, col5 = st.columns([1,1,1,1,1])
+    col1, col2, col3, col4, col5, col6 = st.columns([1,1,1,1,1,1])
     
     with col1:
         st.page_link("pages/home.py", label="Home", icon=None)
@@ -15,6 +15,8 @@ def topHeader():
         st.page_link("pages/compete.py", label="Compete", icon=None)
     with col5:
         st.page_link("pages/community.py", label="Community", icon=None)
+    with col5:
+        st.page_link("pages/account.py", label="Account", icon=None)
 
 
 def hideSideBar():
